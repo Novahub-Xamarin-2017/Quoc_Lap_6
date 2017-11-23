@@ -7,8 +7,8 @@ namespace ex1solution
     {
         static List<int> PrimeNumbers(int n)
         {
-            List<int> primeNumbers = new List<int>();
-            for (int i = 2; i < n; i++)
+            var primeNumbers = new List<int>();
+            for (var i = 2; i < n; i++)
             {
                 if (i.IsPrme())
                 {
@@ -20,7 +20,10 @@ namespace ex1solution
         static void Main(string[] args)
         {
             Func<int, List<int>> createList = PrimeNumbers;
-            createList(100).ForEach(Console.WriteLine);
+            Console.Write("Enter a number :");
+            var number = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine($"Prime numbers below {number} are :");
+            createList(number).ForEach(Console.WriteLine);
             Console.ReadKey();
         }
     }
