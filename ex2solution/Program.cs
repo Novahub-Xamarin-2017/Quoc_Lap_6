@@ -5,12 +5,12 @@ namespace ex2solution
 {
     class Program
     {
-        private static List<int> InitArray(int n, Func<int, bool> method)
+        private static List<int> InitArray(int n, Func<int, bool> condition)
         {
             var list = new List<int>();
             for (var i = 1; i < n; i++)
             {
-                if (method(i))
+                if (condition(i))
                 {
                     list.Add(i);
                 }
