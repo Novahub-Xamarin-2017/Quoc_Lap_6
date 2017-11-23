@@ -4,12 +4,12 @@ namespace ex3solution
 {
     class Program
     {
-        static long Sum(int n, Func<int, long> condition)
+        static long Sum(int n, Func<int, long> method)
         {
             var sumResult = 0L;
             for (var i = 1; i <= n; i++)
             {
-                sumResult += condition(i);
+                sumResult += method(i);
             }
             return sumResult;
         }
