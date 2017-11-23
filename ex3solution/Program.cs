@@ -16,7 +16,6 @@ namespace ex3solution
 
         static void Main(string[] args)
         {
-            
             var s = Sum(5, x => (long) Math.Pow(x, x));
             Console.WriteLine(s);
             Console.ReadKey();
