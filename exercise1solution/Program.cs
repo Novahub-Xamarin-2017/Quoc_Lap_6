@@ -5,7 +5,7 @@ namespace exercise1solution
 {
     class Program
     {
-        static List<int> PrimeNumbers(int n)
+        static List<int> InitPrimeNumbers(int n)
         {
             bool IsPrme(int number)
             {
@@ -33,11 +33,10 @@ namespace exercise1solution
         }
         static void Main(string[] args)
         {
-            Func<int, List<int>> createList = PrimeNumbers;
             Console.Write("Enter a number :");
             var number = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine($"Prime numbers below {number} are :");
-            createList(number).ForEach(Console.WriteLine);
+            InitPrimeNumbers(number).ForEach(Console.WriteLine);
             Console.ReadKey();
         }
     }
